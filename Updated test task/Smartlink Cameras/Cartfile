@@ -1,0 +1,2 @@
+# Third Party Dependencies
+github "ReactiveX/RxSwift" ~> 5.1.3

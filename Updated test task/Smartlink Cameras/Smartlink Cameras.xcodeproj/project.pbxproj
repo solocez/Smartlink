@@ -1,0 +1,788 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A5A22C2B27ADA27800D1B82B /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A22C2727ADA27800D1B82B /* RxSwift.xcframework */; };
+		A5A22C2D27ADA27800D1B82B /* RxBlocking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A22C2827ADA27800D1B82B /* RxBlocking.xcframework */; };
+		A5A22C2F27ADA27800D1B82B /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A22C2927ADA27800D1B82B /* RxCocoa.xcframework */; };
+		A5A22C3127ADA27800D1B82B /* RxRelay.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A22C2A27ADA27800D1B82B /* RxRelay.xcframework */; };
+		FB0E4C2223C8CA8D003E70B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E4C2123C8CA8D003E70B0 /* AppDelegate.swift */; };
+		FB0E4C2423C8CA8D003E70B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E4C2323C8CA8D003E70B0 /* SceneDelegate.swift */; };
+		FB0E4C2723C8CA8D003E70B0 /* Smartlink_Cameras.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB0E4C2523C8CA8D003E70B0 /* Smartlink_Cameras.xcdatamodeld */; };
+		FB0E4C2B23C8CA90003E70B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0E4C2A23C8CA90003E70B0 /* Assets.xcassets */; };
+		FB0E4C2E23C8CA90003E70B0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB0E4C2D23C8CA90003E70B0 /* Preview Assets.xcassets */; };
+		FB0E4C3123C8CA90003E70B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB0E4C2F23C8CA90003E70B0 /* LaunchScreen.storyboard */; };
+		FB0E4C3C23C8CA90003E70B0 /* Smartlink_CamerasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E4C3B23C8CA90003E70B0 /* Smartlink_CamerasTests.swift */; };
+		FB0E4C4723C8CA90003E70B0 /* Smartlink_CamerasUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0E4C4623C8CA90003E70B0 /* Smartlink_CamerasUITests.swift */; };
+		FBB4295123C8D229002EF467 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4294F23C8D229002EF467 /* BaseCoordinator.swift */; };
+		FBB4295223C8D229002EF467 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4295023C8D229002EF467 /* ActivityIndicator.swift */; };
+		FBB4295423C8D280002EF467 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4295323C8D280002EF467 /* AppCoordinator.swift */; };
+		FBB4295623C8D2FE002EF467 /* AppDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4295523C8D2FE002EF467 /* AppDependency.swift */; };
+		FBB4295923C8D455002EF467 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4295823C8D455002EF467 /* UserService.swift */; };
+		FBB4295D23C8D554002EF467 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4295C23C8D554002EF467 /* APIService.swift */; };
+		FBB4296223C8D684002EF467 /* UIWindow+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4295F23C8D684002EF467 /* UIWindow+Extensions.swift */; };
+		FBB4296323C8D684002EF467 /* RxSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4296023C8D684002EF467 /* RxSwift+Extensions.swift */; };
+		FBB4296423C8D684002EF467 /* UserDefaults+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4296123C8D684002EF467 /* UserDefaults+Extensions.swift */; };
+		FBB4296723C8D833002EF467 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4296623C8D833002EF467 /* LoginCoordinator.swift */; };
+		FBB4296923C8D89C002EF467 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4296823C8D89C002EF467 /* LoginViewController.swift */; };
+		FBB4296B23C8D8F7002EF467 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4296A23C8D8F7002EF467 /* MainCoordinator.swift */; };
+		FBB4296D23C8D949002EF467 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4296C23C8D949002EF467 /* MainTabBarController.swift */; };
+		FBB4297023C8DEE4002EF467 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4296F23C8DEE4002EF467 /* ViewModelType.swift */; };
+		FBB4297223C8DEFA002EF467 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB4297123C8DEFA002EF467 /* LoginViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB0E4C3823C8CA90003E70B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB0E4C1623C8CA8D003E70B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB0E4C1D23C8CA8D003E70B0;
+			remoteInfo = "Smartlink Cameras";
+		};
+		FB0E4C4323C8CA90003E70B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB0E4C1623C8CA8D003E70B0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB0E4C1D23C8CA8D003E70B0;
+			remoteInfo = "Smartlink Cameras";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A5A22C2727ADA27800D1B82B /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = Carthage/Build/RxSwift.xcframework; sourceTree = "<group>"; };
+		A5A22C2827ADA27800D1B82B /* RxBlocking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxBlocking.xcframework; path = Carthage/Build/RxBlocking.xcframework; sourceTree = "<group>"; };
+		A5A22C2927ADA27800D1B82B /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoa.xcframework; path = Carthage/Build/RxCocoa.xcframework; sourceTree = "<group>"; };
+		A5A22C2A27ADA27800D1B82B /* RxRelay.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxRelay.xcframework; path = Carthage/Build/RxRelay.xcframework; sourceTree = "<group>"; };
+		FB0E4C1E23C8CA8D003E70B0 /* Smartlink Cameras.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smartlink Cameras.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0E4C2123C8CA8D003E70B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB0E4C2323C8CA8D003E70B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FB0E4C2623C8CA8D003E70B0 /* Smartlink_Cameras.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Smartlink_Cameras.xcdatamodel; sourceTree = "<group>"; };
+		FB0E4C2A23C8CA90003E70B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB0E4C2D23C8CA90003E70B0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FB0E4C3023C8CA90003E70B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB0E4C3223C8CA90003E70B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0E4C3723C8CA90003E70B0 /* Smartlink CamerasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smartlink CamerasTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0E4C3B23C8CA90003E70B0 /* Smartlink_CamerasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smartlink_CamerasTests.swift; sourceTree = "<group>"; };
+		FB0E4C3D23C8CA90003E70B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB0E4C4223C8CA90003E70B0 /* Smartlink CamerasUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smartlink CamerasUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB0E4C4623C8CA90003E70B0 /* Smartlink_CamerasUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smartlink_CamerasUITests.swift; sourceTree = "<group>"; };
+		FB0E4C4823C8CA90003E70B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBB4294F23C8D229002EF467 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		FBB4295023C8D229002EF467 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		FBB4295323C8D280002EF467 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FBB4295523C8D2FE002EF467 /* AppDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependency.swift; sourceTree = "<group>"; };
+		FBB4295823C8D455002EF467 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		FBB4295C23C8D554002EF467 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		FBB4295F23C8D684002EF467 /* UIWindow+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extensions.swift"; sourceTree = "<group>"; };
+		FBB4296023C8D684002EF467 /* RxSwift+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RxSwift+Extensions.swift"; sourceTree = "<group>"; };
+		FBB4296123C8D684002EF467 /* UserDefaults+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extensions.swift"; sourceTree = "<group>"; };
+		FBB4296623C8D833002EF467 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		FBB4296823C8D89C002EF467 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		FBB4296A23C8D8F7002EF467 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		FBB4296C23C8D949002EF467 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		FBB4296F23C8DEE4002EF467 /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		FBB4297123C8DEFA002EF467 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB0E4C1B23C8CA8D003E70B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A22C2D27ADA27800D1B82B /* RxBlocking.xcframework in Frameworks */,
+				A5A22C3127ADA27800D1B82B /* RxRelay.xcframework in Frameworks */,
+				A5A22C2B27ADA27800D1B82B /* RxSwift.xcframework in Frameworks */,
+				A5A22C2F27ADA27800D1B82B /* RxCocoa.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB0E4C3423C8CA90003E70B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB0E4C3F23C8CA90003E70B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB0E4C1523C8CA8D003E70B0 = {
+			isa = PBXGroup;
+			children = (
+				FB0E4C2023C8CA8D003E70B0 /* Smartlink Cameras */,
+				FB0E4C3A23C8CA90003E70B0 /* Smartlink CamerasTests */,
+				FB0E4C4523C8CA90003E70B0 /* Smartlink CamerasUITests */,
+				FB0E4C1F23C8CA8D003E70B0 /* Products */,
+				FBB4293823C8CE51002EF467 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FB0E4C1F23C8CA8D003E70B0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E4C1E23C8CA8D003E70B0 /* Smartlink Cameras.app */,
+				FB0E4C3723C8CA90003E70B0 /* Smartlink CamerasTests.xctest */,
+				FB0E4C4223C8CA90003E70B0 /* Smartlink CamerasUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB0E4C2023C8CA8D003E70B0 /* Smartlink Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4294A23C8CEF8002EF467 /* Source */,
+				FB0E4C2A23C8CA90003E70B0 /* Assets.xcassets */,
+				FB0E4C2F23C8CA90003E70B0 /* LaunchScreen.storyboard */,
+				FB0E4C3223C8CA90003E70B0 /* Info.plist */,
+				FB0E4C2523C8CA8D003E70B0 /* Smartlink_Cameras.xcdatamodeld */,
+				FB0E4C2C23C8CA90003E70B0 /* Preview Content */,
+			);
+			path = "Smartlink Cameras";
+			sourceTree = "<group>";
+		};
+		FB0E4C2C23C8CA90003E70B0 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E4C2D23C8CA90003E70B0 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FB0E4C3A23C8CA90003E70B0 /* Smartlink CamerasTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E4C3B23C8CA90003E70B0 /* Smartlink_CamerasTests.swift */,
+				FB0E4C3D23C8CA90003E70B0 /* Info.plist */,
+			);
+			path = "Smartlink CamerasTests";
+			sourceTree = "<group>";
+		};
+		FB0E4C4523C8CA90003E70B0 /* Smartlink CamerasUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB0E4C4623C8CA90003E70B0 /* Smartlink_CamerasUITests.swift */,
+				FB0E4C4823C8CA90003E70B0 /* Info.plist */,
+			);
+			path = "Smartlink CamerasUITests";
+			sourceTree = "<group>";
+		};
+		FBB4293823C8CE51002EF467 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A5A22C2827ADA27800D1B82B /* RxBlocking.xcframework */,
+				A5A22C2927ADA27800D1B82B /* RxCocoa.xcframework */,
+				A5A22C2A27ADA27800D1B82B /* RxRelay.xcframework */,
+				A5A22C2727ADA27800D1B82B /* RxSwift.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBB4294A23C8CEF8002EF467 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4294B23C8CF04002EF467 /* Application */,
+				FBB4294D23C8D1B6002EF467 /* Common */,
+				FBB4295E23C8D63B002EF467 /* Extensions */,
+				FBB4296523C8D80B002EF467 /* Login */,
+				FBB4294C23C8D1A3002EF467 /* Main */,
+				FBB4296E23C8DEC4002EF467 /* Protocols */,
+				FBB4295723C8D416002EF467 /* Services */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		FBB4294B23C8CF04002EF467 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4295323C8D280002EF467 /* AppCoordinator.swift */,
+				FB0E4C2123C8CA8D003E70B0 /* AppDelegate.swift */,
+				FBB4295523C8D2FE002EF467 /* AppDependency.swift */,
+				FB0E4C2323C8CA8D003E70B0 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FBB4294C23C8D1A3002EF467 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4296A23C8D8F7002EF467 /* MainCoordinator.swift */,
+				FBB4296C23C8D949002EF467 /* MainTabBarController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FBB4294D23C8D1B6002EF467 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4294E23C8D1CA002EF467 /* Logic */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FBB4294E23C8D1CA002EF467 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4295023C8D229002EF467 /* ActivityIndicator.swift */,
+				FBB4294F23C8D229002EF467 /* BaseCoordinator.swift */,
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		FBB4295723C8D416002EF467 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4295B23C8D541002EF467 /* API */,
+				FBB4295A23C8D537002EF467 /* User */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FBB4295A23C8D537002EF467 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4295823C8D455002EF467 /* UserService.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		FBB4295B23C8D541002EF467 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4295C23C8D554002EF467 /* APIService.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		FBB4295E23C8D63B002EF467 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4296023C8D684002EF467 /* RxSwift+Extensions.swift */,
+				FBB4295F23C8D684002EF467 /* UIWindow+Extensions.swift */,
+				FBB4296123C8D684002EF467 /* UserDefaults+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FBB4296523C8D80B002EF467 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4296623C8D833002EF467 /* LoginCoordinator.swift */,
+				FBB4296823C8D89C002EF467 /* LoginViewController.swift */,
+				FBB4297123C8DEFA002EF467 /* LoginViewModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		FBB4296E23C8DEC4002EF467 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FBB4296F23C8DEE4002EF467 /* ViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB0E4C1D23C8CA8D003E70B0 /* Smartlink Cameras */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB0E4C4B23C8CA90003E70B0 /* Build configuration list for PBXNativeTarget "Smartlink Cameras" */;
+			buildPhases = (
+				FB0E4C1A23C8CA8D003E70B0 /* Sources */,
+				FB0E4C1B23C8CA8D003E70B0 /* Frameworks */,
+				FB0E4C1C23C8CA8D003E70B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smartlink Cameras";
+			productName = "Smartlink Cameras";
+			productReference = FB0E4C1E23C8CA8D003E70B0 /* Smartlink Cameras.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB0E4C3623C8CA90003E70B0 /* Smartlink CamerasTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB0E4C4E23C8CA90003E70B0 /* Build configuration list for PBXNativeTarget "Smartlink CamerasTests" */;
+			buildPhases = (
+				FB0E4C3323C8CA90003E70B0 /* Sources */,
+				FB0E4C3423C8CA90003E70B0 /* Frameworks */,
+				FB0E4C3523C8CA90003E70B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB0E4C3923C8CA90003E70B0 /* PBXTargetDependency */,
+			);
+			name = "Smartlink CamerasTests";
+			productName = "Smartlink CamerasTests";
+			productReference = FB0E4C3723C8CA90003E70B0 /* Smartlink CamerasTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB0E4C4123C8CA90003E70B0 /* Smartlink CamerasUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB0E4C5123C8CA90003E70B0 /* Build configuration list for PBXNativeTarget "Smartlink CamerasUITests" */;
+			buildPhases = (
+				FB0E4C3E23C8CA90003E70B0 /* Sources */,
+				FB0E4C3F23C8CA90003E70B0 /* Frameworks */,
+				FB0E4C4023C8CA90003E70B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB0E4C4423C8CA90003E70B0 /* PBXTargetDependency */,
+			);
+			name = "Smartlink CamerasUITests";
+			productName = "Smartlink CamerasUITests";
+			productReference = FB0E4C4223C8CA90003E70B0 /* Smartlink CamerasUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB0E4C1623C8CA8D003E70B0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1250;
+				ORGANIZATIONNAME = "SecureNet Technologies, LLC";
+				TargetAttributes = {
+					FB0E4C1D23C8CA8D003E70B0 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					FB0E4C3623C8CA90003E70B0 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = FB0E4C1D23C8CA8D003E70B0;
+					};
+					FB0E4C4123C8CA90003E70B0 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = FB0E4C1D23C8CA8D003E70B0;
+					};
+				};
+			};
+			buildConfigurationList = FB0E4C1923C8CA8D003E70B0 /* Build configuration list for PBXProject "Smartlink Cameras" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB0E4C1523C8CA8D003E70B0;
+			productRefGroup = FB0E4C1F23C8CA8D003E70B0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB0E4C1D23C8CA8D003E70B0 /* Smartlink Cameras */,
+				FB0E4C3623C8CA90003E70B0 /* Smartlink CamerasTests */,
+				FB0E4C4123C8CA90003E70B0 /* Smartlink CamerasUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB0E4C1C23C8CA8D003E70B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0E4C3123C8CA90003E70B0 /* LaunchScreen.storyboard in Resources */,
+				FB0E4C2E23C8CA90003E70B0 /* Preview Assets.xcassets in Resources */,
+				FB0E4C2B23C8CA90003E70B0 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB0E4C3523C8CA90003E70B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB0E4C4023C8CA90003E70B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB0E4C1A23C8CA8D003E70B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBB4296423C8D684002EF467 /* UserDefaults+Extensions.swift in Sources */,
+				FBB4295123C8D229002EF467 /* BaseCoordinator.swift in Sources */,
+				FBB4296723C8D833002EF467 /* LoginCoordinator.swift in Sources */,
+				FBB4296923C8D89C002EF467 /* LoginViewController.swift in Sources */,
+				FBB4296323C8D684002EF467 /* RxSwift+Extensions.swift in Sources */,
+				FB0E4C2223C8CA8D003E70B0 /* AppDelegate.swift in Sources */,
+				FBB4296223C8D684002EF467 /* UIWindow+Extensions.swift in Sources */,
+				FBB4295923C8D455002EF467 /* UserService.swift in Sources */,
+				FBB4297223C8DEFA002EF467 /* LoginViewModel.swift in Sources */,
+				FB0E4C2723C8CA8D003E70B0 /* Smartlink_Cameras.xcdatamodeld in Sources */,
+				FBB4296B23C8D8F7002EF467 /* MainCoordinator.swift in Sources */,
+				FBB4297023C8DEE4002EF467 /* ViewModelType.swift in Sources */,
+				FBB4295223C8D229002EF467 /* ActivityIndicator.swift in Sources */,
+				FBB4295D23C8D554002EF467 /* APIService.swift in Sources */,
+				FB0E4C2423C8CA8D003E70B0 /* SceneDelegate.swift in Sources */,
+				FBB4295623C8D2FE002EF467 /* AppDependency.swift in Sources */,
+				FBB4295423C8D280002EF467 /* AppCoordinator.swift in Sources */,
+				FBB4296D23C8D949002EF467 /* MainTabBarController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB0E4C3323C8CA90003E70B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0E4C3C23C8CA90003E70B0 /* Smartlink_CamerasTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB0E4C3E23C8CA90003E70B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB0E4C4723C8CA90003E70B0 /* Smartlink_CamerasUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB0E4C3923C8CA90003E70B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB0E4C1D23C8CA8D003E70B0 /* Smartlink Cameras */;
+			targetProxy = FB0E4C3823C8CA90003E70B0 /* PBXContainerItemProxy */;
+		};
+		FB0E4C4423C8CA90003E70B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB0E4C1D23C8CA8D003E70B0 /* Smartlink Cameras */;
+			targetProxy = FB0E4C4323C8CA90003E70B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB0E4C2F23C8CA90003E70B0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB0E4C3023C8CA90003E70B0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB0E4C4923C8CA90003E70B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FB0E4C4A23C8CA90003E70B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB0E4C4C23C8CA90003E70B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Smartlink Cameras/Preview Content\"";
+				DEVELOPMENT_TEAM = 3JLG8N5656;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Smartlink Cameras/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.securenettech.Smartlink-Cameras";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FB0E4C4D23C8CA90003E70B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Smartlink Cameras/Preview Content\"";
+				DEVELOPMENT_TEAM = 3JLG8N5656;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = "Smartlink Cameras/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.securenettech.Smartlink-Cameras";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		FB0E4C4F23C8CA90003E70B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JLG8N5656;
+				INFOPLIST_FILE = "Smartlink CamerasTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.securenettech.Smartlink-CamerasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smartlink Cameras.app/Smartlink Cameras";
+			};
+			name = Debug;
+		};
+		FB0E4C5023C8CA90003E70B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JLG8N5656;
+				INFOPLIST_FILE = "Smartlink CamerasTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.securenettech.Smartlink-CamerasTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smartlink Cameras.app/Smartlink Cameras";
+			};
+			name = Release;
+		};
+		FB0E4C5223C8CA90003E70B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JLG8N5656;
+				INFOPLIST_FILE = "Smartlink CamerasUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.securenettech.Smartlink-CamerasUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smartlink Cameras";
+			};
+			name = Debug;
+		};
+		FB0E4C5323C8CA90003E70B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3JLG8N5656;
+				INFOPLIST_FILE = "Smartlink CamerasUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.securenettech.Smartlink-CamerasUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Smartlink Cameras";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB0E4C1923C8CA8D003E70B0 /* Build configuration list for PBXProject "Smartlink Cameras" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0E4C4923C8CA90003E70B0 /* Debug */,
+				FB0E4C4A23C8CA90003E70B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB0E4C4B23C8CA90003E70B0 /* Build configuration list for PBXNativeTarget "Smartlink Cameras" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0E4C4C23C8CA90003E70B0 /* Debug */,
+				FB0E4C4D23C8CA90003E70B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB0E4C4E23C8CA90003E70B0 /* Build configuration list for PBXNativeTarget "Smartlink CamerasTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0E4C4F23C8CA90003E70B0 /* Debug */,
+				FB0E4C5023C8CA90003E70B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB0E4C5123C8CA90003E70B0 /* Build configuration list for PBXNativeTarget "Smartlink CamerasUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB0E4C5223C8CA90003E70B0 /* Debug */,
+				FB0E4C5323C8CA90003E70B0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FB0E4C2523C8CA8D003E70B0 /* Smartlink_Cameras.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FB0E4C2623C8CA8D003E70B0 /* Smartlink_Cameras.xcdatamodel */,
+			);
+			currentVersion = FB0E4C2623C8CA8D003E70B0 /* Smartlink_Cameras.xcdatamodel */;
+			path = Smartlink_Cameras.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = FB0E4C1623C8CA8D003E70B0 /* Project object */;
+}
