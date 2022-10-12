@@ -16,14 +16,20 @@ protocol HasUserService {
     var userService: UserServiceProtocol { get }
 }
 
-struct AppDependency: HasAPIService, HasUserService {
+protocol HasRestAPI {
+    var restApi: RestAPIProtocol { get }
+}
+
+struct AppDependency: HasAPIService, HasUserService, HasRestAPI {
     
     let apiService: APIServiceProtocol
     let userService: UserServiceProtocol
+    let restApi: RestAPIProtocol
     
     init() {
         apiService = APIService()
         userService = UserService(apiService: apiService)
+        restApi = RestManager()
     }
     
 }

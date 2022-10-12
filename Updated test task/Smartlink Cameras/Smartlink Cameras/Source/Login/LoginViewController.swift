@@ -12,7 +12,8 @@ import UIKit
 final class LoginViewController: RxViewController, ViewModelAttachingProtocol, KeyboardDismissableOnTap, MoveUpScreenWhenKeyboardAppears {
     // MARK: - Conformance to ViewModelAttachingProtocol
     var bindings: LoginViewModel.Bindings {
-        return LoginViewModel.Bindings(loginButtonTap: loginButton.rx.tap.asObservable())
+        LoginViewModel.Bindings(loginButtonTap: logInBtn.rx.tap.asObservable(),
+                                loginNameChanged: loginTxtFld.rx.text.asObservable())
     }
     
     var viewModel: Attachable<LoginViewModel>!
@@ -29,13 +30,13 @@ final class LoginViewController: RxViewController, ViewModelAttachingProtocol, K
     // MARK: - UI variables
     fileprivate var areConstraintsSet: Bool = false
     
-    fileprivate lazy var loginButton: UIButton = {
-        let button = UIButton(type: .custom)
-        button.setTitle(NSLocalizedString("Login", comment: "Login button text"), for: .normal)
-        button.setTitleColor(.gray, for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        return button
-    }()
+//    fileprivate lazy var loginButton: UIButton = {
+//        let button = UIButton(type: .custom)
+//        button.setTitle(NSLocalizedString("Login", comment: "Login button text"), for: .normal)
+//        button.setTitleColor(.gray, for: .normal)
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        return button
+//    }()
 
     fileprivate lazy var backgroundImg: UIImageView = {
         let backgroundImage = UIImageView(image: UIImage(named: "loginBackground"))

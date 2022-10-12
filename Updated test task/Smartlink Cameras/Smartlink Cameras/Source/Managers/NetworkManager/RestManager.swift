@@ -6,11 +6,11 @@ enum RestManagerError: Error {
     case incorrectUrl
 }
 
-protocol RestAPI {
+protocol RestAPIProtocol {
     func execute(_ request: RestRequest) -> Single<Data>
 }
 
-final class RestManager: RestAPI {
+final class RestManager: RestAPIProtocol {
 
     private let bag = DisposeBag()
 

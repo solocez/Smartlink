@@ -11,7 +11,7 @@ import UIKit
 
 final class LoginCoordinator: BaseCoordinator<Void> {
     
-    typealias Dependencies = HasUserService
+    typealias Dependencies = HasUserService & HasRestAPI
     
     fileprivate let dependencies: Dependencies
     fileprivate let window: UIWindow

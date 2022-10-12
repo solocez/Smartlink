@@ -5,6 +5,11 @@ enum HTTPMethod: String{
     case get = "GET"
 }
 
+enum RequestParameters {
+    case body([String: Any])
+    case url([String: Any])
+}
+
 struct RestRequest {
     var path: String
     var method: HTTPMethod
@@ -22,7 +27,12 @@ struct RestRequest {
     }
 }
 
-enum RequestParameters {
-    case body([String: Any])
-    case url([String: Any])
+struct RestRequestBuilder {
+    let `default`: RestRequest
+
+    init(username: String) {
+        self.default = RestRequest(path: "",
+                                   method: .post,
+                                   parameters: .body(["method": "getPartnerEnvironment", "username": username, "environment": "PRODUCTION"]))
+    }
 }

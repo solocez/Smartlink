@@ -11,20 +11,50 @@ import RxSwift
 
 final class LoginViewModel: ViewModelProtocol {
     
-    typealias Dependency = HasUserService
+    typealias Dependency = HasUserService & HasRestAPI
     
     struct Bindings {
         let loginButtonTap: Observable<Void>
+        let loginNameChanged: Observable<String?>
     }
     
     let loginResult: Observable<Void>
     
+    fileprivate let bag = DisposeBag()
+    
     init(dependency: Dependency, bindings: Bindings) {
         loginResult = bindings.loginButtonTap
             .do(onNext: { _ in dependency.userService.login()  })
+        
+        bindings.loginNameChanged
+                .flatMap { dependency.restApi
+                        .execute(RestRequestBuilder(username: $0 ?? "").default)
+                        .map { LoginResponseFactory().dematerialiseLoginResponse(from: $0) }
+                }
+                .filter { $0 != nil }
+                .subscribe(onNext: { loginResponseEntry in
+                    //NSLog(loginResponseEntry?.platform.baseURL?.absoluteString ?? "")
+                    NSLog("22222")
+                })
+                .disposed(by: bag)
+        bindings.loginNameChanged
+                .subscribe(onNext: { [unowned self] loginText in
+                    NSLog("dffgf")
+                    dependency.restApi
+                            .execute(RestRequestBuilder(username: loginText ?? "").default)
+                            .map { LoginResponseFactory().dematerialiseLoginResponse(from: $0)?.platform.baseURL }
+                            .filter { $0 != nil }
+                            .subscribe(onSuccess: { resultUrl in
+                                NSLog("RESULT: \(resultUrl?.absoluteString ?? "")")
+                            })
+                            .disposed(by: self.bag)
+                }, onError: { error in
+                    NSLog("ERROR: \(error.localizedDescription)")
+                })
+                .disposed(by: bag)
     }
     
     deinit {
-        
+        NSLog("--- - ---- -- - - Disposed")
     }
 }
