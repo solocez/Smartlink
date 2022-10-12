@@ -2,8 +2,8 @@ import Foundation
 
 enum Constants {
     enum Host {
-        static let prod = "https://jsonplaceholder.typicode.com/"
-        static let preprod = "https://jsonplaceholder.typicode.com/"
+        static let prod = "http://registration.securenettech.com/registration.php"
+        static let preprod = "http://registration.securenettech.com/registration.php"
     }
     static let innerElementsSpacing = 8.0
     static let topBottomMinimalPadding = 16.0

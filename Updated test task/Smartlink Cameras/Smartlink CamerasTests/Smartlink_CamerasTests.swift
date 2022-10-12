@@ -7,9 +7,15 @@
 //
 
 import XCTest
+import RxSwift
+
 @testable import Smartlink_Cameras
 
 class Smartlink_CamerasTests: XCTestCase {
+
+    let bag = DisposeBag()
+
+    @Inject var api: RestAPI
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,16 +25,30 @@ class Smartlink_CamerasTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testUsersEndpointReachable() throws {
+        let touchEndpointExp = expectation(description: "touch endpoint")
+        api.execute(RestRequest(path: "", method: .post, parameters: .body(["method": "getPartnerEnvironment", "username": "helixdemo", "environment": "PRODUCTION"])))
+            .subscribe(onSuccess: { _ in
+                touchEndpointExp.fulfill()
+            }, onError: { error in
+                XCTFail("Failed: \(error.localizedDescription)")
+            })
+            .disposed(by: bag)
+            
+        wait(for: [touchEndpointExp], timeout: 2)
     }
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
+//    func testParseResponse() throws {
+//        let touchEndpointExp = expectation(description: "touch endpoint")
+//        api.execute(RestRequest(path: "comments/1", method: .get))
+//            .subscribe(onSuccess: { jsonData in
+//                XCTAssertNotNil(CommentFactory().dematerialiseComment(from: jsonData))
+//                touchEndpointExp.fulfill()
+//            }, onFailure: { error in
+//                XCTFail("Failed: \(error.localizedDescription)")
+//            })
+//            .disposed(by: bag)
+//
+//        wait(for: [touchEndpointExp], timeout: 2)
+//    }
 }

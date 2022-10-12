@@ -21,6 +21,9 @@
 		123A0F3428F6F6D300A506C4 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F3328F6F6D200A506C4 /* Bundle+Extension.swift */; };
 		123A0F3628F6F71C00A506C4 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F3528F6F71C00A506C4 /* AppConfiguration.swift */; };
 		123A0F3828F6F7AB00A506C4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F3728F6F7AB00A506C4 /* APIError.swift */; };
+		123A0F3C28F6FC7600A506C4 /* AppComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F3A28F6FC7600A506C4 /* AppComponent.swift */; };
+		123A0F3D28F6FC7600A506C4 /* AppAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F3B28F6FC7600A506C4 /* AppAssembly.swift */; };
+		123A0F3F28F6FC9700A506C4 /* Swinject.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 123A0F3E28F6FC9700A506C4 /* Swinject.xcframework */; };
 		A5A22C2B27ADA27800D1B82B /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A22C2727ADA27800D1B82B /* RxSwift.xcframework */; };
 		A5A22C2D27ADA27800D1B82B /* RxBlocking.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A22C2827ADA27800D1B82B /* RxBlocking.xcframework */; };
 		A5A22C2F27ADA27800D1B82B /* RxCocoa.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A22C2927ADA27800D1B82B /* RxCocoa.xcframework */; };
@@ -82,6 +85,9 @@
 		123A0F3328F6F6D200A506C4 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		123A0F3528F6F71C00A506C4 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
 		123A0F3728F6F7AB00A506C4 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		123A0F3A28F6FC7600A506C4 /* AppComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppComponent.swift; sourceTree = "<group>"; };
+		123A0F3B28F6FC7600A506C4 /* AppAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppAssembly.swift; sourceTree = "<group>"; };
+		123A0F3E28F6FC9700A506C4 /* Swinject.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Swinject.xcframework; path = Carthage/Build/Swinject.xcframework; sourceTree = "<group>"; };
 		A5A22C2727ADA27800D1B82B /* RxSwift.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxSwift.xcframework; path = Carthage/Build/RxSwift.xcframework; sourceTree = "<group>"; };
 		A5A22C2827ADA27800D1B82B /* RxBlocking.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxBlocking.xcframework; path = Carthage/Build/RxBlocking.xcframework; sourceTree = "<group>"; };
 		A5A22C2927ADA27800D1B82B /* RxCocoa.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = RxCocoa.xcframework; path = Carthage/Build/RxCocoa.xcframework; sourceTree = "<group>"; };
@@ -122,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				123A0F3F28F6FC9700A506C4 /* Swinject.xcframework in Frameworks */,
 				A5A22C2D27ADA27800D1B82B /* RxBlocking.xcframework in Frameworks */,
 				A5A22C3127ADA27800D1B82B /* RxRelay.xcframework in Frameworks */,
 				A5A22C2B27ADA27800D1B82B /* RxSwift.xcframework in Frameworks */,
@@ -183,6 +190,15 @@
 				123A0F2C28F6F40500A506C4 /* RestManager.swift */,
 			);
 			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		123A0F3928F6FC7600A506C4 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				123A0F3A28F6FC7600A506C4 /* AppComponent.swift */,
+				123A0F3B28F6FC7600A506C4 /* AppAssembly.swift */,
+			);
+			path = Di;
 			sourceTree = "<group>";
 		};
 		FB0E4C1523C8CA8D003E70B0 = {
@@ -248,6 +264,7 @@
 		FBB4293823C8CE51002EF467 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				123A0F3E28F6FC9700A506C4 /* Swinject.xcframework */,
 				123A0F3128F6F69300A506C4 /* SwiftyJSON.xcframework */,
 				123A0F2F28F6F68B00A506C4 /* Alamofire.xcframework */,
 				A5A22C2827ADA27800D1B82B /* RxBlocking.xcframework */,
@@ -261,6 +278,7 @@
 		FBB4294A23C8CEF8002EF467 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				123A0F3928F6FC7600A506C4 /* Di */,
 				123A0F2928F6F40500A506C4 /* Managers */,
 				123A0F2028F6ECDB00A506C4 /* Helpers */,
 				123A0F1A28F6C61D00A506C4 /* UIControls */,
@@ -502,10 +520,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB4296423C8D684002EF467 /* UserDefaults+Extensions.swift in Sources */,
+				123A0F3D28F6FC7600A506C4 /* AppAssembly.swift in Sources */,
 				FBB4295123C8D229002EF467 /* BaseCoordinator.swift in Sources */,
 				123A0F3428F6F6D300A506C4 /* Bundle+Extension.swift in Sources */,
 				123A0F2428F6ED2900A506C4 /* RxViewController.swift in Sources */,
 				123A0F2828F6F2C100A506C4 /* MoveUpScreenWhenKeyboardAppears.swift in Sources */,
+				123A0F3C28F6FC7600A506C4 /* AppComponent.swift in Sources */,
 				FBB4296723C8D833002EF467 /* LoginCoordinator.swift in Sources */,
 				FBB4296923C8D89C002EF467 /* LoginViewController.swift in Sources */,
 				123A0F1C28F6C61D00A506C4 /* CheckBox.swift in Sources */,
