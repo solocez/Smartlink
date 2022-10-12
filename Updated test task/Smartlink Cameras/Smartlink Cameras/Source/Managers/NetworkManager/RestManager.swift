@@ -1,6 +1,5 @@
-import Alamofire
 import RxSwift
-import SwiftyJSON
+import Foundation
 
 enum RestManagerError: Error {
     case badInput
@@ -12,22 +11,24 @@ protocol RestAPI {
 }
 
 final class RestManager: RestAPI {
+
+    private let bag = DisposeBag()
+
     init() {}
 
     func execute(_ request: RestRequest) -> Single<Data> {
         Single<Data>.create { [unowned self] single in
             do {
                 let urlRequest = try self.prepareURLRequest(for: request)
-                AF.request(urlRequest)
-                    .validate()
-                    .responseData { response in
-                        switch response.result {
-                        case .success(let value):
-                            single(.success(value))
-                        case .failure(let error):
-                            single(.error(error))
-                        }
-                    }
+                URLSession.shared.rx.data(request: urlRequest)
+                    .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .background))
+                    .observeOn(MainScheduler.asyncInstance)
+                    .subscribe(onNext: { response in
+                        single(.success(response))
+                    }, onError: { error in
+                        single(.error(error))
+                    })
+                    .disposed(by: bag)
             } catch {
                 single(.error(error))
             }

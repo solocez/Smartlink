@@ -15,7 +15,7 @@ class Smartlink_CamerasTests: XCTestCase {
 
     let bag = DisposeBag()
 
-    @Inject var api: RestAPI
+    var api = RestManager()
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -37,18 +37,33 @@ class Smartlink_CamerasTests: XCTestCase {
             
         wait(for: [touchEndpointExp], timeout: 2)
     }
+    
+    func testParseResponseJSON() throws {
+        let mockResponseJSON = "{\"server\":{\"partner\":\"CLOUD\",\"environment\":\"PRODUCTION\"},\"platform\":{\"baseURL\" :\"https://cloud.secure.direct/smarttech/\"}}"
 
-//    func testParseResponse() throws {
-//        let touchEndpointExp = expectation(description: "touch endpoint")
-//        api.execute(RestRequest(path: "comments/1", method: .get))
-//            .subscribe(onSuccess: { jsonData in
-//                XCTAssertNotNil(CommentFactory().dematerialiseComment(from: jsonData))
-//                touchEndpointExp.fulfill()
-//            }, onFailure: { error in
-//                XCTFail("Failed: \(error.localizedDescription)")
-//            })
-//            .disposed(by: bag)
-//
-//        wait(for: [touchEndpointExp], timeout: 2)
-//    }
+        guard let data = mockResponseJSON.data(using: .utf8) else {
+            XCTAssert(false)
+            return
+        }
+        do {
+            let result = try JSONDecoder().decode(LoginResponseEntity.self, from: data)
+            XCTAssertNotNil(result.platform.baseURL)
+        } catch {
+            XCTAssert(false)
+        }
+    }
+    
+    func testParseResponseFromData() throws {
+        let touchEndpointExp = expectation(description: "touch endpoint")
+        api.execute(RestRequest(path: "", method: .post, parameters: .body(["method": "getPartnerEnvironment", "username": "helixdemo", "environment": "PRODUCTION"])))
+            .subscribe(onSuccess: { rawData in
+                XCTAssertNotNil(LoginResponseFactory().dematerialiseLoginResponse(from: rawData))
+                touchEndpointExp.fulfill()
+            }, onError: { error in
+                XCTFail("Failed: \(error.localizedDescription)")
+            })
+            .disposed(by: bag)
+            
+        wait(for: [touchEndpointExp], timeout: 2)
+    }
 }

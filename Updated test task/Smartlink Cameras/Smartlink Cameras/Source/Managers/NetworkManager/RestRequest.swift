@@ -1,4 +1,9 @@
-import Alamofire
+import Foundation
+
+enum HTTPMethod: String{
+    case post = "POST"
+    case get = "GET"
+}
 
 struct RestRequest {
     var path: String
