@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		123A0F1728F5812900A506C4 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F1628F5812900A506C4 /* UIView+Extension.swift */; };
-		123A0F1928F6BDBB00A506C4 /* tmpModulo.xib in Resources */ = {isa = PBXBuildFile; fileRef = 123A0F1828F6BDBB00A506C4 /* tmpModulo.xib */; };
 		123A0F1C28F6C61D00A506C4 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F1B28F6C61D00A506C4 /* CheckBox.swift */; };
 		123A0F2228F6ECDB00A506C4 /* KeyboardDismissableOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F2128F6ECDB00A506C4 /* KeyboardDismissableOnTap.swift */; };
 		123A0F2428F6ED2900A506C4 /* RxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F2328F6ED2900A506C4 /* RxViewController.swift */; };
@@ -18,7 +17,6 @@
 		123A0F2E28F6F40500A506C4 /* RestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F2C28F6F40500A506C4 /* RestManager.swift */; };
 		123A0F3428F6F6D300A506C4 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F3328F6F6D200A506C4 /* Bundle+Extension.swift */; };
 		123A0F3628F6F71C00A506C4 /* AppConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F3528F6F71C00A506C4 /* AppConfiguration.swift */; };
-		123A0F3828F6F7AB00A506C4 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F3728F6F7AB00A506C4 /* APIError.swift */; };
 		123A0F4328F705FB00A506C4 /* LoginResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F4128F705FB00A506C4 /* LoginResponseFactory.swift */; };
 		123A0F4428F705FB00A506C4 /* LoginResponseEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123A0F4228F705FB00A506C4 /* LoginResponseEntity.swift */; };
 		A5A22C2B27ADA27800D1B82B /* RxSwift.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A22C2727ADA27800D1B82B /* RxSwift.xcframework */; };
@@ -69,7 +67,6 @@
 
 /* Begin PBXFileReference section */
 		123A0F1628F5812900A506C4 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
-		123A0F1828F6BDBB00A506C4 /* tmpModulo.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = tmpModulo.xib; sourceTree = "<group>"; };
 		123A0F1B28F6C61D00A506C4 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
 		123A0F2128F6ECDB00A506C4 /* KeyboardDismissableOnTap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardDismissableOnTap.swift; sourceTree = "<group>"; };
 		123A0F2328F6ED2900A506C4 /* RxViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RxViewController.swift; sourceTree = "<group>"; };
@@ -81,7 +78,6 @@
 		123A0F3128F6F69300A506C4 /* SwiftyJSON.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = SwiftyJSON.xcframework; path = Carthage/Build/SwiftyJSON.xcframework; sourceTree = "<group>"; };
 		123A0F3328F6F6D200A506C4 /* Bundle+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		123A0F3528F6F71C00A506C4 /* AppConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfiguration.swift; sourceTree = "<group>"; };
-		123A0F3728F6F7AB00A506C4 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		123A0F3E28F6FC9700A506C4 /* Swinject.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = Swinject.xcframework; path = Carthage/Build/Swinject.xcframework; sourceTree = "<group>"; };
 		123A0F4128F705FB00A506C4 /* LoginResponseFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseFactory.swift; sourceTree = "<group>"; };
 		123A0F4228F705FB00A506C4 /* LoginResponseEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginResponseEntity.swift; sourceTree = "<group>"; };
@@ -161,7 +157,6 @@
 		123A0F2028F6ECDB00A506C4 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				123A0F3728F6F7AB00A506C4 /* APIError.swift */,
 				123A0F3528F6F71C00A506C4 /* AppConfiguration.swift */,
 				123A0F2728F6F2C100A506C4 /* MoveUpScreenWhenKeyboardAppears.swift */,
 				123A0F2128F6ECDB00A506C4 /* KeyboardDismissableOnTap.swift */,
@@ -367,7 +362,6 @@
 				FBB4296623C8D833002EF467 /* LoginCoordinator.swift */,
 				FBB4296823C8D89C002EF467 /* LoginViewController.swift */,
 				FBB4297123C8DEFA002EF467 /* LoginViewModel.swift */,
-				123A0F1828F6BDBB00A506C4 /* tmpModulo.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -488,7 +482,6 @@
 				FB0E4C3123C8CA90003E70B0 /* LaunchScreen.storyboard in Resources */,
 				FB0E4C2E23C8CA90003E70B0 /* Preview Assets.xcassets in Resources */,
 				FB0E4C2B23C8CA90003E70B0 /* Assets.xcassets in Resources */,
-				123A0F1928F6BDBB00A506C4 /* tmpModulo.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +533,6 @@
 				123A0F4328F705FB00A506C4 /* LoginResponseFactory.swift in Sources */,
 				123A0F4428F705FB00A506C4 /* LoginResponseEntity.swift in Sources */,
 				FBB4295623C8D2FE002EF467 /* AppDependency.swift in Sources */,
-				123A0F3828F6F7AB00A506C4 /* APIError.swift in Sources */,
 				FBB4295423C8D280002EF467 /* AppCoordinator.swift in Sources */,
 				123A0F3628F6F71C00A506C4 /* AppConfiguration.swift in Sources */,
 				FBB4296D23C8D949002EF467 /* MainTabBarController.swift in Sources */,

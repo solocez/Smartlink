@@ -22,8 +22,6 @@ final class Checkbox: UIControl {
         label.setContentHuggingPriority(.defaultLow, for: .horizontal)
         label.numberOfLines = 0
         label.isAccessibilityElement = false
-        //label.font = Font.Nunito.regular(16.0)
-//        label.textColor = themeService.attribute({ $0.black }).value
         return label
     }()
     
@@ -43,12 +41,10 @@ final class Checkbox: UIControl {
         didSet {
             if isSelected {
                 accessibilityTraits.update(with: .selected)
-                //checkboxImageView.image = WLAssets.Generic.GraphicElements.checkBoxChecked.image
                 checkboxImageView.image = UIImage(named: "icon-checkmark")
                 
             } else {
                 accessibilityTraits.remove(.selected)
-                //checkboxImageView.image = WLAssets.Generic.GraphicElements.checkBox.image
                 checkboxImageView.image = UIImage()
             }
             checked.accept(isSelected)

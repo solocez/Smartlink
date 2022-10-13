@@ -25,29 +25,23 @@ final class AppCoordinator: BaseCoordinator<Void> {
     }
     
     fileprivate func coordinateToRoot(with authenticationState: AuthenticationState) {
-        showLoginView()
-            .asDriverOnErrorJustComplete()
-            .drive(onNext: { [weak self] authState in
-                self?.coordinateToRoot(with: authState)
-            })
-            .disposed(by: disposeBag)
-//        switch authenticationState {
-//            case .signedIn:
-//                return showMainView()
-//                    .asDriverOnErrorJustComplete()
-//                    .drive(onNext: { [weak self] authState in
-//                        self?.coordinateToRoot(with: authState)
-//                    })
-//                    .disposed(by: disposeBag)
-//
-//            case .signedOut:
-//                return showLoginView()
-//                    .asDriverOnErrorJustComplete()
-//                    .drive(onNext: { [weak self] authState in
-//                        self?.coordinateToRoot(with: authState)
-//                    })
-//                    .disposed(by: disposeBag)
-//        }
+        switch authenticationState {
+            case .signedIn:
+                return showMainView()
+                    .asDriverOnErrorJustComplete()
+                    .drive(onNext: { [weak self] authState in
+                        self?.coordinateToRoot(with: authState)
+                    })
+                    .disposed(by: disposeBag)
+
+            case .signedOut:
+                return showLoginView()
+                    .asDriverOnErrorJustComplete()
+                    .drive(onNext: { [weak self] authState in
+                        self?.coordinateToRoot(with: authState)
+                    })
+                    .disposed(by: disposeBag)
+        }
     }
     
     fileprivate func showLoginView() -> Observable<AuthenticationState> {

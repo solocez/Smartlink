@@ -29,32 +29,18 @@ final class LoginViewModel: ViewModelProtocol {
         bindings.loginNameChanged
                 .flatMap { dependency.restApi
                         .execute(RestRequestBuilder(username: $0 ?? "").default)
+                        .catchErrorJustReturn(Data())
                         .map { LoginResponseFactory().dematerialiseLoginResponse(from: $0) }
                 }
                 .filter { $0 != nil }
                 .subscribe(onNext: { loginResponseEntry in
-                    //NSLog(loginResponseEntry?.platform.baseURL?.absoluteString ?? "")
-                    NSLog("22222")
-                })
-                .disposed(by: bag)
-        bindings.loginNameChanged
-                .subscribe(onNext: { [unowned self] loginText in
-                    NSLog("dffgf")
-                    dependency.restApi
-                            .execute(RestRequestBuilder(username: loginText ?? "").default)
-                            .map { LoginResponseFactory().dematerialiseLoginResponse(from: $0)?.platform.baseURL }
-                            .filter { $0 != nil }
-                            .subscribe(onSuccess: { resultUrl in
-                                NSLog("RESULT: \(resultUrl?.absoluteString ?? "")")
-                            })
-                            .disposed(by: self.bag)
+                    NSLog(loginResponseEntry?.platform.baseURL?.absoluteString ?? "")
                 }, onError: { error in
-                    NSLog("ERROR: \(error.localizedDescription)")
+                    NSLog("ERROR WHILE TRIGGERING REQUEST: \(error)")
                 })
                 .disposed(by: bag)
     }
     
     deinit {
-        NSLog("--- - ---- -- - - Disposed")
     }
 }

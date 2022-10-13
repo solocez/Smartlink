@@ -29,19 +29,17 @@ final class LoginViewController: RxViewController, ViewModelAttachingProtocol, K
     
     // MARK: - UI variables
     fileprivate var areConstraintsSet: Bool = false
-    
-//    fileprivate lazy var loginButton: UIButton = {
-//        let button = UIButton(type: .custom)
-//        button.setTitle(NSLocalizedString("Login", comment: "Login button text"), for: .normal)
-//        button.setTitleColor(.gray, for: .normal)
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        return button
-//    }()
 
     fileprivate lazy var backgroundImg: UIImageView = {
         let backgroundImage = UIImageView(image: UIImage(named: "loginBackground"))
         backgroundImage.contentMode = .scaleToFill
         return backgroundImage
+    }()
+
+    fileprivate lazy var logoImg: UIImageView = {
+        let logo = UIImageView(image: UIImage(named: "loginLogo"))
+        logo.contentMode = .scaleToFill
+        return logo
     }()
 
     fileprivate lazy var paddingView1: UIView = {
@@ -149,6 +147,7 @@ fileprivate extension LoginViewController {
         backgroundStack.spacing = 0
         backgroundStack.place(in: self.view)
 
+        logoImg.place(in: backgroundImg)
         backgroundStack.addArrangedSubview(backgroundImg)
         backgroundStack.addArrangedSubview(configureBottomPart())
     }
